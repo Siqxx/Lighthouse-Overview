@@ -74,3 +74,26 @@ function toggleTilt() {
 function changeMapType(type) {
   map.setMapTypeId(type);
 }
+function updateTimestamp() {
+  const now = new Date();
+  document.getElementById("lastUpdated").textContent = now.toLocaleString();
+}
+
+// Call this whenever data is fetched
+function showTable(status) {
+  fetch("lighthouses.json")
+    .then(response => response.json())
+    .then(data => {
+      const filtered = data.filter(lh => lh.status === status);
+      let html = "<table><tr><th>Name</th><th>Status</th></tr>";
+      filtered.forEach(lh => {
+        html += `<tr onclick="focusLighthouse('${lh.name}')">
+                   <td>${lh.name}</td><td>${lh.status}</td>
+                 </tr>`;
+      });
+      html += "</table>";
+      document.getElementById("table").innerHTML = html;
+
+      updateTimestamp(); // refresh timestamp
+    });
+}
