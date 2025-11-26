@@ -1,0 +1,39 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+#map {
+  height: 500px;
+  width: 100%;
+}
+
+#controls {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  background: #f4f4f4;
+}
+
+button {
+  padding: 8px 12px;
+  margin: 2px;
+  cursor: pointer;
+}
+
+#table {
+  padding: 10px;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+tr:hover {
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
