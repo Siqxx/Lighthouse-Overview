@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Lighthouse Monitoring Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
+</head>
+<body onload="initMap()">
+
+  <h2 style="text-align:center;">Lighthouse Monitoring Dashboard</h2>
+
+  <div id="map"></div>
+
+  <div id="controls">
+    <button onclick="showTable('Operating')">Operating</button>
+    <button onclick="showTable('Not Operating')">Not Operating</button>
+    <button onclick="toggleTilt()">Toggle 3D Tilt</button>
+    <select onchange="changeMapType(this.value)">
+      <option value="roadmap">Roadmap</option>
+      <option value="satellite" selected>Satellite</option>
+      <option value="hybrid">Hybrid</option>
+      <option value="terrain">Terrain</option>
+    </select>
+  </div>
+
+  <div id="table"></div>
+
+</body>
+</html>
