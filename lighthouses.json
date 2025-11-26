@@ -1,0 +1,14 @@
+[
+  {
+    "name": "Cape Santiago Lighthouse",
+    "lat": 13.7833,
+    "lng": 120.7333,
+    "status": "Operating"
+  },
+  {
+    "name": "Corregidor Lighthouse",
+    "lat": 14.3833,
+    "lng": 120.5833,
+    "status": "Not Operating"
+  }
+]
